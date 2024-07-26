@@ -6,6 +6,8 @@
 :root {
   --background-color: #1d1d1d;
   --main-text-color: #f5f5f5;
+
+  --title-font-size: 3rem;
 }
 
 @font-face {
@@ -19,9 +21,45 @@ body {
   background: var(--background-color);
   color: var(--main-text-color);
   font-family: karla, Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 350px;
+
+  /* keep all big divs centered on the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Page should not take up all of the screen for big screens */
+.container {
+  max-width: 900px;
 }
 
 header {
   display: flex;
   margin: 2.5rem 2.5rem 2.5rem 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--title-font-size);
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 1rem 1rem 0 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    --title-font-size: 5rem;
+  }
 }
