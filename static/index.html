@@ -43,6 +43,14 @@
 
       <div id="work-experience" class='section'>
         <h2>Experience</h2>
+        <div id="experience-types">
+          <button hx-get="/hello"
+            hx-trigger="click"
+            hx-target="#hello"
+            hx-swap="outerHTML"
+          ></button>
+          <p id="hello">hello!</p>
+        </div>
       </div>
 
       <div id="projects" class='section'>
