@@ -6,11 +6,19 @@ import (
 	"net/http"
 )
 
-func main() {
-	// http.HandleFunc("/", mainHandler)
-	// serve static files (look inside 'static' directory)
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("I am here")
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintf(w, "<p>world</p>")
+}
 
-	fmt.Println("Serving on localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /hello/", helloHandler)
+
+	// serve front page by default
+	mux.Handle("/", http.FileServer(http.Dir("./static")))
+
+	log.Fatal(http.ListenAndServe("localhost:8080", mux))
+	// http.ListenAndServe("localhost:8080", nil)
 }
