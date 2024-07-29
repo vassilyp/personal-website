@@ -34,9 +34,17 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  margin-bottom: 1rem;
+}
+
 h3 {
   text-align: center;
   margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
 }
 
 /* Page should not take up all of the screen for big screens */
@@ -70,29 +78,32 @@ nav {
 
 a {
   outline-color: transparent;
+  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
 }
 
-a:link {
-  color: var(--accent-color);
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 a:visited {
   color: var(--accent-color);
 }
 
-a:focus {
-  text-decoration: none;
-  background: #cdfeaa;
-}
-
-a:hover {
-  text-decoration: none;
-  background: #cdfeaa;
-}
-
-a:active {
-  background: #6900ff;
-  color: #cdfeaa;
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* End navigation links */
@@ -105,23 +116,79 @@ a:active {
   justify-content: space-between;
 }
 
-.about-col-1 {
+#about .about-col-1 {
   display: flex;
   justify-content: center;
 }
 
-.about-col-1 img {
+#about .about-col-1 img {
   width: auto;
   max-height: 450px;
   border-radius: 8px;
 }
 
-.about-col-2 {
+#about .about-col-2 {
   text-align: left;
   flex-basis: 55%;
   margin-top: 1rem;
 }
 
+#about .about-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  margin: 1rem 0 1rem 0;
+  background: var(--background-color);
+  border: none;
+  color: var(--accent-color);
+  font-family: karla;
+  font-size: 1rem;
+
+  display: inline-block;
+  position: relative;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+button.clicked::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+}
+
+#about ul {
+  list-style-position: inside;
+}
+
+#about li~li {
+  margin-top: 0.3rem;
+}
 
 
 @media screen and (min-width: 640px) {
