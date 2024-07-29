@@ -122,6 +122,8 @@ a:active {
   margin-top: 1rem;
 }
 
+
+
 @media screen and (min-width: 640px) {
   h1 {
     font-size: 6rem;
@@ -132,10 +134,10 @@ a:active {
   }
 
   .about-col-2 {
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 0 1rem 2rem 1rem;
   }
 
-  h2 {
+  #about h2 {
     text-align: center;
   }
 }

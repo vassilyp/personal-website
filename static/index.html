@@ -38,11 +38,30 @@
           <p>I currently work at UBC IT Web Services, where I fix websites.</p>
           <br>
           <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
-        </div>
-      </div>
 
-      <div id="work-experience" class='section'>
-        <h2>Experience</h2>
+          <div>
+            <button
+              hx-get="/experience/"
+              hx-target="#about-qualifications"
+              hx-trigger="click"
+              hx-swap="innerHTML"
+            >Experience</button>
+            <button
+              hx-get="/education/"
+              hx-target="#about-qualifications"
+              hx-trigger="click"
+              hx-swap="innerHTML"
+            >Education</button>
+            <div id="about-qualifications">
+              <h4>Co-op Web Developer | UBC IT Web Services</h4>
+              <ul>
+                <li>Maintained ~150 UBC websites, keeping track of dependency and security updates</li>
+                <li>Resolved 40 tickets from UBC IT clients, including bug fixes and feature requests</li>
+                <li>Migrated dozens of sites to the latest Drupal version as part of an organization-wide upgrade project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="projects" class='section'>
