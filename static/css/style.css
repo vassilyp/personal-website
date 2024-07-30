@@ -49,7 +49,7 @@ h4 {
 
 /* Page should not take up all of the screen for big screens */
 .container {
-  max-width: 900px;
+  max-width: 70rem;
 }
 
 /* give each "section" (about, experience, etc) some margin */
@@ -76,7 +76,7 @@ nav {
   justify-content: space-evenly;
 }
 
-a {
+.blue-link {
   outline-color: transparent;
   text-decoration: none;
 
@@ -84,7 +84,7 @@ a {
   position: relative;
 }
 
-a::after {
+.blue-link::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -97,11 +97,11 @@ a::after {
   transition: transform 0.25s ease-out;
 }
 
-a:visited {
+.blue-link:visited {
   color: var(--accent-color);
 }
 
-a:hover::after {
+.blue-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -137,6 +137,8 @@ a:hover::after {
   display: flex;
   justify-content: space-evenly;
 }
+
+/* This next section makes buttons behave like .blue-link  */
 
 button {
   margin: 1rem 0 1rem 0;
@@ -190,6 +192,76 @@ button.clicked::after {
   margin-top: 0.3rem;
 }
 
+/* End about me */
+
+/* Projects */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.project {
+  position: relative;
+
+  margin: 1rem 1rem 1rem 1rem;
+
+  justify-content: center;
+}
+
+.project::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: black;
+  border-radius: 8px;
+
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+.project:hover::after {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.project img {
+  width: 30rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project .details {
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  /* I'm not sure where this number comes from */
+  margin-top: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project:hover .details {
+  visibility: visible;
+}
+
+.details a {
+  color: white;
+}
+
+.details i {
+  margin-top: 1rem;
+  font-size: 50px;
+}
 
 @media screen and (min-width: 640px) {
   h1 {

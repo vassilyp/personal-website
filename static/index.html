@@ -6,10 +6,13 @@
     <title>Vassily Petrousevitch</title>
 
     <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/dcdc85afdd.js" crossorigin="anonymous"></script>
     <!-- Import htmx -->
     <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+  </head>
+  <body>
 
     <header>
       <h1>Vassily Petrousevitch</h1>
@@ -18,10 +21,10 @@
 
     <div class="container">
       <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <a class="blue-link" href="#about">About</a>
+        <a class="blue-link" href="#projects">Projects</a>
+        <a class="blue-link" href="#blog">Blog</a>
+        <a class="blue-link" href="#contact">Contact</a>
       </nav>
 
       <!-- Big image here -->
@@ -45,12 +48,14 @@
                 hx-target="#about-qualifications"
                 hx-trigger="click"
                 hx-swap="innerHTML"
+                class="blue-link"
               >Experience</button>
               <button
                 hx-get="/education/"
                 hx-target="#about-qualifications"
                 hx-trigger="click"
                 hx-swap="innerHTML"
+                class="blue-link"
               >Education</button>
             </div>
             <div id="about-qualifications">
@@ -65,20 +70,59 @@
         </div>
       </div>
 
-      <div id="projects" class='section'>
+      <div class='section'>
         <h2>Projects</h2>
         <p>Here are some projects I've previously worked on:</p>
-        <h3>GalacticHeist</h3>
-        <h3>Personal websites (version 1 &amp 2)</h3>
-        <h3>Neovim configuration</h3>
-        <h3>FriendGen</h3>
-        <h3>Washroom Wayfinder</h3>
-        <h3>Which Elevator Is Working?</h3>
+        <div id="projects">
+          <div class='project'>
+            <div class="details">
+              <h3>GalacticHeist</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/GalacticHeist"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/GalacticHeist-sample.png" alt="Galactic heist">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Personal website (version 1)</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/vassily.petrousevitch.github.io"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/PersonalSite-sample.png" alt="Personal site">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Neovim configuration</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/nvim"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/NeovimConfig-sample.png" alt="Neovim config">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>FriendGen</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/friendGen"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/FriendGen-sample.png" alt="Friend generator">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Washroom Wayfinder</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/WashroomWayfinder"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/WashroomWayfinder-sample.png" alt="Washroom wayfinder">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Which Elevator Is Working?</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/WhichElevatorIsWorking"><i class="fa fa-globe"></i></a>
+            </div>
+            <img src="images/WhichElevatorIsWorking-sample.png" alt="Which elevator is working?">
+          </div>
+        </div>
 
-        <p>You can see more on my <a href="https://github.com/Vassily-Petrousevitch">GitHub</a></p>
+        <br>
+        <p>You can see more on my <a class="blue-link" href="https://github.com/Vassily-Petrousevitch">GitHub</a></p>
       </div>
 
-      <div id="blog">
+      <div id="blog" class='section'>
         <h2>Blog</h2>
         <p>Coming soon (maybe!)</p>
       </div>
