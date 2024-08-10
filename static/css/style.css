@@ -272,6 +272,8 @@ button.clicked::after {
   width: 100px;
   height: auto;
   transition: transform 1s ease-in-out;
+
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 #tech img:hover {
