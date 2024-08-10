@@ -6,49 +6,155 @@
     <title>Vassily Petrousevitch</title>
 
     <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/dcdc85afdd.js" crossorigin="anonymous"></script>
+
+    <!-- More icons (for tech section)-->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <!-- Import htmx -->
     <script src="https://unpkg.com/htmx.org@2.0.1"></script>
 
+  </head>
+  <body>
+
     <header>
       <h1>Vassily Petrousevitch</h1>
-      <h2>Full-stack / game developer.</h2>
+      <h3>Full-stack / game developer.</h3>
     </header>
 
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="blog">Blog</a>
+    <div class="container">
+      <nav>
+        <a class="blue-link" href="#about">About</a>
+        <a class="blue-link" href="#projects">Projects</a>
+        <a class="blue-link" href="#blog">Blog</a>
+        <a class="blue-link" href="#contact">Contact</a>
+      </nav>
 
-    <!-- Big image here -->
+      <div id="about" class='section'>
+        <div class='about-col-1'>
+          <img src="images/headshot.jpg" alt="headshot">
+        </div>
+        <div class='about-col-2'>
+          <h2>About me</h2>
+          <p>I am a 4th year Computer Engineering student at UBC with an interest in web and game development.</p>
+          <br>
+          <p>I currently work at UBC IT Web Services, where I fix websites.</p>
+          <br>
+          <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
 
-    <div id="about">
-      <h2>About me</h2>
-      <p>I am a 4th year Computer Engineering student at UBC with an interest in web and game development.</p>
+          <div>
+            <div class="about-buttons">
+              <button
+                hx-get="/experience/"
+                hx-target="#about-qualifications"
+                hx-trigger="click"
+                hx-swap="innerHTML"
+                class="blue-link"
+              >Experience</button>
+              <button
+                hx-get="/education/"
+                hx-target="#about-qualifications"
+                hx-trigger="click"
+                hx-swap="innerHTML"
+                class="blue-link"
+              >Education</button>
+            </div>
+            <div id="about-qualifications">
+              <h4>Co-op Web Developer @ UBC IT Web Services</h4>
+              <ul>
+                <li>Maintained ~150 UBC websites, keeping track of dependency and security updates</li>
+                <li>Resolved 40 tickets from UBC IT clients, including bug fixes and feature requests</li>
+                <li>Migrated dozens of sites to the latest Drupal version as part of an organization-wide upgrade project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <p>I currently work at UBC IT Web Services, where I fix websites.</p>
+      <div class='section'>
+        <h2>Projects</h2>
+        <p>Here are some projects I've previously worked on:</p>
+        <div id="projects">
+          <div class='project'>
+            <div class="details">
+              <h3>GalacticHeist</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/GalacticHeist"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/GalacticHeist-sample.png" alt="Galactic heist">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Personal website (version 1)</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/vassily.petrousevitch.github.io"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/PersonalSite-sample.png" alt="Personal site">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Neovim configuration</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/nvim"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/NeovimConfig-sample.png" alt="Neovim config">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>FriendGen</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/friendGen"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/FriendGen-sample.png" alt="Friend generator">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Washroom Wayfinder</h3>
+              <a href="https://github.com/Vassily-Petrousevitch/WashroomWayfinder"><i class="fa fa-github"></i></a>
+            </div>
+            <img src="images/WashroomWayfinder-sample.png" alt="Washroom wayfinder">
+          </div>
+          <div class='project'>
+            <div class="details">
+              <h3>Which Elevator Is Working?</h3>
+              <a href="https://vassily-petrousevitch.github.io/WhichElevatorIsWorking/"><i class="fa fa-globe"></i></a>
+            </div>
+            <img src="images/WhichElevatorIsWorking-sample.png" alt="Which elevator is working?">
+          </div>
+        </div>
 
-      <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
+        <br>
+        <p>You can see more on my <a class="blue-link" href="https://github.com/Vassily-Petrousevitch">GitHub</a>.</p>
+      </div>
+
+      <div id="tech" class='section'>
+        <h2>Tech</h2>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original-wordmark.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" />
+      </div>
+
+
+      <div id="blog" class='section'>
+        <h2>Blog</h2>
+        <p>Coming soon (maybe!)</p>
+      </div>
+
+      <footer>
+        <!-- Add github, linkedin, make a contact form later -->
+      </footer>
     </div>
-
-    <div id="projects">
-      <h2>Projects</h2>
-      <p>Here are some projects I've previously worked on:</p>
-      <h3>GalacticHeist</h3>
-      <h3>Neovim configuration</h3>
-      <h3>Personal websites (version 1 &amp 2)</h3>
-      <h3>Rat Jam (working title)</h3>
-
-      <p>You can see more on my <a href="github.com/Vassily-Petrousevitch">GitHub</a></p>
-    </div>
-
-    <div id="blog">
-      <h2>Blog</h2>
-      <p>Coming soon (maybe!)</p>
-    </div>
-    
-    <footer>
-      <!-- Add github, linkedin, make a contact form later -->
-    </footer>
   </body>
 </html>
