@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 :root {
   --background-color: #1d1d1d;
   --main-text-color: #fff3f3;
@@ -31,16 +35,17 @@ body {
 }
 
 h1 {
+  font-size: 3rem;
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   text-align: center;
-  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -64,17 +69,30 @@ header {
   margin: 2.5rem 2.5rem 2.5rem 2.5rem;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+header h3 {
+  margin-top: 1rem;
 }
 
 /* End title section */
 
-/* (Navigation) links */
+/* Contact me section */
 
-nav {
+#contacts {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 1.5rem;
 }
+
+#contacts a {
+  color: var(--main-text-color);
+}
+
+/* End contact me section */
+
+/* (Navigation) links */
 
 .blue-link {
   outline-color: transparent;
@@ -141,7 +159,7 @@ nav {
 /* This next section makes buttons behave like .blue-link  */
 
 button {
-  margin: 1rem 0 1rem 0;
+  margin: 1.5rem 0 1rem 0;
   background: var(--background-color);
   border: none;
   color: var(--accent-color);
@@ -165,6 +183,11 @@ button::after {
   transition: transform 0.25s ease-out;
 }
 
+button.clicked::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -172,16 +195,6 @@ button:hover {
 button:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-button.clicked::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(1);
-  height: 2px;
-  bottom: -1px;
-  left: 0;
 }
 
 #about ul {
@@ -293,12 +306,7 @@ button.clicked::after {
 /* End technology section */
 
 
-/* Contact me section */
-
-
-
-
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 940px) {
   h1 {
     font-size: 6rem;
   }
@@ -307,8 +315,8 @@ button.clicked::after {
     flex-direction: row;
   }
 
-  .about-col-2 {
-    margin: 0 1rem 2rem 1rem;
+  #about .about-col-2 {
+    margin: 0rem 1rem 2rem 1rem;
   }
 
   #about h2 {
