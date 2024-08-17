@@ -15,23 +15,20 @@
 
     <!-- Import htmx -->
     <script src="https://unpkg.com/htmx.org@2.0.1"></script>
-
   </head>
   <body>
 
     <header>
       <h1>Vassily Petrousevitch</h1>
       <h3>Full-stack / game developer.</h3>
+      <div id="contacts">
+        <p><a class="blue-link" href="https://github.com/Vassily-Petrousevitch">GitHub: <i class="fa-brands fa-github"></i></a></p>
+        <p><a class="blue-link" href="https://linkedin.com/in/vassily-petrousevitch">LinkedIn: <i class="fa-brands fa-linkedin"></i></a></p>
+        <p><a class="blue-link" href="mailto:vasspetrousevitch@gmail.com">Email: <i class="fa-regular fa-envelope"></i></a></p>
+      </div>
     </header>
 
     <div class="container">
-      <nav>
-        <a class="blue-link" href="#about">About</a>
-        <a class="blue-link" href="#projects">Projects</a>
-        <a class="blue-link" href="#blog">Blog</a>
-        <a class="blue-link" href="#contact">Contact</a>
-      </nav>
-
       <div id="about" class='section'>
         <div class='about-col-1'>
           <img src="images/headshot.jpg" alt="headshot">
@@ -44,20 +41,20 @@
           <br>
           <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
 
-          <div>
+          <div id="about-two-columns">
             <div class="about-buttons">
               <button
                 hx-get="/experience/"
-                hx-target="#about-qualifications"
+                hx-target="#about-two-columns"
                 hx-trigger="click"
-                hx-swap="innerHTML"
-                class="blue-link"
+                hx-swap="outerHTML"
+                class="blue-link clicked"
               >Experience</button>
               <button
                 hx-get="/education/"
-                hx-target="#about-qualifications"
+                hx-target="#about-two-columns"
                 hx-trigger="click"
-                hx-swap="innerHTML"
+                hx-swap="outerHTML"
                 class="blue-link"
               >Education</button>
             </div>
@@ -75,50 +72,50 @@
 
       <div class='section'>
         <h2>Projects</h2>
-        <p>Here are some projects I've previously worked on:</p>
+        <p>Here are some projects I've previously worked on:</p><br>
         <div id="projects">
-          <div class='project'>
+          <a class="project" href="https://github.com/Vassily-Petrousevitch/GalacticHeist">
             <div class="details">
               <h3>GalacticHeist</h3>
-              <a href="https://github.com/Vassily-Petrousevitch/GalacticHeist"><i class="fa fa-github"></i></a>
+              <i class="fa fa-github"></i>
             </div>
             <img src="images/GalacticHeist-sample.png" alt="Galactic heist">
-          </div>
-          <div class='project'>
+          </a>
+          <a class="project" href="https://github.com/Vassily-Petrousevitch/vassily-petrousevitch.github.io">
             <div class="details">
               <h3>Personal website (version 1)</h3>
-              <a href="https://github.com/Vassily-Petrousevitch/vassily.petrousevitch.github.io"><i class="fa fa-github"></i></a>
+              <i class="fa fa-github"></i>
             </div>
             <img src="images/PersonalSite-sample.png" alt="Personal site">
-          </div>
-          <div class='project'>
+          </a>
+          <a class="project" href="https://github.com/Vassily-Petrousevitch/nvim">
             <div class="details">
               <h3>Neovim configuration</h3>
-              <a href="https://github.com/Vassily-Petrousevitch/nvim"><i class="fa fa-github"></i></a>
+              <i class="fa fa-github"></i>
             </div>
             <img src="images/NeovimConfig-sample.png" alt="Neovim config">
-          </div>
-          <div class='project'>
+          </a>
+          <a class="project" href="https://github.com/Vassily-Petrousevitch/friendGen">
             <div class="details">
               <h3>FriendGen</h3>
-              <a href="https://github.com/Vassily-Petrousevitch/friendGen"><i class="fa fa-github"></i></a>
+              <i class="fa fa-github"></i>
             </div>
             <img src="images/FriendGen-sample.png" alt="Friend generator">
-          </div>
-          <div class='project'>
+          </a>
+          <a class="project" href="https://github.com/Vassily-Petrousevitch/WashroomWayfinder">
             <div class="details">
               <h3>Washroom Wayfinder</h3>
-              <a href="https://github.com/Vassily-Petrousevitch/WashroomWayfinder"><i class="fa fa-github"></i></a>
+              <i class="fa fa-github"></i>
             </div>
             <img src="images/WashroomWayfinder-sample.png" alt="Washroom wayfinder">
-          </div>
-          <div class='project'>
+          </a>
+          <a class="project" href="https://vassily-petrousevitch.github.io/WhichElevatorIsWorking/">
             <div class="details">
               <h3>Which Elevator Is Working?</h3>
-              <a href="https://vassily-petrousevitch.github.io/WhichElevatorIsWorking/"><i class="fa fa-globe"></i></a>
+              <i class="fa fa-globe"></i>
             </div>
             <img src="images/WhichElevatorIsWorking-sample.png" alt="Which elevator is working?">
-          </div>
+          </a>
         </div>
 
         <br>
@@ -152,9 +149,9 @@
         <p>Coming soon (maybe!)</p>
       </div>
 
-      <footer>
-        <!-- Add github, linkedin, make a contact form later -->
-      </footer>
     </div>
+
+    <!-- Javascript effects -->
+    <script src="js/effects.js"></script>
   </body>
 </html>
