@@ -8,7 +8,8 @@ import (
 
 var templates = template.Must(template.ParseFiles(
 	"static/templates/experience.html",
-	"static/templates/education.html"))
+	"static/templates/education.html",
+))
 
 func renderTemplate(w http.ResponseWriter, templateName string) {
 	err := templates.ExecuteTemplate(w, templateName+".html", nil)
@@ -35,5 +36,4 @@ func main() {
 	mux.Handle("/", http.FileServer(http.Dir("./static")))
 
 	log.Fatal(http.ListenAndServe("localhost:8080", mux))
-	// http.ListenAndServe("localhost:8080", nil)
 }
