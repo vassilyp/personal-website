@@ -96,6 +96,7 @@ header h3 {
 
 .blue-link {
   outline-color: transparent;
+  color: var(--accent-color);
   text-decoration: none;
 
   display: inline-block;
@@ -113,10 +114,6 @@ header h3 {
   background-color: var(--accent-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
-}
-
-.blue-link:visited {
-  color: var(--accent-color);
 }
 
 .blue-link:hover::after {
