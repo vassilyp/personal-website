@@ -137,8 +137,6 @@ header h3 {
 }
 
 #about .about-col-1 img {
-  width: auto;
-  max-height: 450px;
   border-radius: 8px;
 }
 
@@ -243,8 +241,6 @@ button:hover::after {
 }
 
 .project img {
-  width: 20rem;
-  height: 13rem;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -282,8 +278,6 @@ button:hover::after {
 /* Technology section */
 
 #tech img {
-  width: 100px;
-  height: auto;
   margin: 2rem 2rem 2rem 2rem;
 }
 
