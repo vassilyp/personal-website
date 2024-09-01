@@ -242,6 +242,8 @@ button:hover::after {
 
 .project img {
   object-fit: cover;
+  width: 20rem;
+  height: 13rem;
   border-radius: 8px;
 }
 
