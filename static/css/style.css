@@ -123,6 +123,15 @@ header h3 {
 
 /* End navigation links */
 
+/* Pre content/nav section */
+
+#content-container nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* End pre content/nav section */
+
 /* About me */
 
 #about {

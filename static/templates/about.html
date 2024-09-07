@@ -1,0 +1,65 @@
+<nav>
+  <button
+    hx-get="/about/"
+    hx-target="#content-container"
+    hx-trigger="click"
+    hx-swap="innerHTML"
+    class="blue-link clicked"
+  >About</button>
+  <button
+    hx-get="/projects/"
+    hx-target="#content-container"
+    hx-trigger="click"
+    hx-swap="innerHTML"
+    class="blue-link"
+  >
+    Projects/Tech
+  </button>
+  <button
+
+  >
+    Blog
+  </button>
+</nav>
+<div id="about" class='section'>
+  <div class='about-col-1'>
+    <img src="images/headshot.jpg" alt="headshot" height="450px" width="auto">
+  </div>
+  <div class='about-col-2'>
+    <h2>About me</h2>
+    <p>I am a 4th year Computer Engineering student at UBC with an interest in web and game development.</p>
+    <br>
+    <p>I currently work at UBC IT Web Services, where I fix websites.</p>
+    <br>
+    <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
+
+    <div id="about-two-columns">
+      <div class="about-buttons">
+        <button
+          hx-get="/experience/"
+          hx-target="#about-two-columns"
+          hx-trigger="click"
+          hx-swap="outerHTML"
+          class="blue-link clicked"
+        >Experience</button>
+        <button
+          hx-get="/education/"
+          hx-target="#about-two-columns"
+          hx-trigger="click"
+          hx-swap="outerHTML"
+          class="blue-link"
+        >Education</button>
+      </div>
+      <div id="about-qualifications">
+        <h4>Co-op Web Developer @ UBC IT Web Services</h4>
+        <ul>
+          <li>Maintained ~150 UBC websites, keeping track of dependency and security updates</li>
+          <li>Resolved 40 tickets from UBC IT clients, including bug fixes and feature requests</li>
+          <li>Migrated dozens of sites to the latest Drupal version as part of an organization-wide upgrade project</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

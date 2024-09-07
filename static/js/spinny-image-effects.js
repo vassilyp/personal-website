@@ -1,5 +1,5 @@
-const techs = document.querySelectorAll("#tech img")
-const animationDuration = 1;    // second(s)
+var techs = document.querySelectorAll("#tech img")
+var animationDuration = 1;    // second(s)
 
 for (let i = 0; i < techs.length; i++) {
   techs[i].addEventListener("mouseover", () => {
@@ -12,3 +12,5 @@ for (let i = 0; i < techs.length; i++) {
     }
   })
 }
+
+
