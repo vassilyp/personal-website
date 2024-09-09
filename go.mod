@@ -1,3 +1,3 @@
-module Vassily-Petrousevitch/personal-website
+module vassilyp/personal-website
 
 go 1.22.5
