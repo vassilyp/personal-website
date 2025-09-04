@@ -9,9 +9,7 @@ uniform float u_time;
 out vec4 outColor;
 
 float random(in vec2 st) {
-    return fract(sin(dot(st.xy,
-                vec2(12.9898, 78.233))) *
-            43758.5453123);
+    return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
 }
 
 // Based on Morgan McGuire @morgan3d
@@ -38,9 +36,8 @@ float noise(in vec2 st) {
 float fbm(in vec2 st) {
     // Initial values
     float value = 0.0;
-    float amplitude = .2;
-    float frequency = 0.;
-    //
+    float amplitude = 0.2;
+
     // Loop of octaves
     for (int i = 0; i < OCTAVES; i++) {
         value += amplitude * noise(st);
@@ -52,8 +49,6 @@ float fbm(in vec2 st) {
 
 void main() {
     vec2 st = v_position;
-    // Scale the space in order to see the function
-    st *= .5;
 
     // Base color: dark blue
     vec3 color = vec3(0.2627, 0.349, 0.4627);

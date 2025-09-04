@@ -4,7 +4,6 @@ function main(vs, fs) {
   const gl = document.getElementById("c").getContext("webgl2");
   const programInfo = twgl.createProgramInfo(gl, [vs, fs]);
   twgl.setDefaults({ attribPrefix: "a_" });
-  console.log("Made it to init");
 
   // -------- DO INIT TIME THINGS HERE --------------
   twgl.resizeCanvasToDisplaySize(gl.canvas);
