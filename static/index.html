@@ -1,31 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vassily Petrousevitch</title>
     <link rel="canonical" href="https://vassilyp.com/" />
 
-    <link href="css/style.css?ver=2.0" rel="stylesheet">
-
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/dcdc85afdd.js" crossorigin="anonymous"></script>
-
-    <!-- More icons (for tech section)-->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!-- Import htmx -->
-    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+    <link href="css/style.css?ver=2.0" rel="stylesheet" />
   </head>
   <body>
-
+    <canvas id="c"></canvas>
     <header>
       <h1>Vassily Petrousevitch</h1>
-      <h3>Full-stack / game developer.</h3>
+      <h3>Full-stack web developer.</h3>
       <div id="contacts">
-        <p><a class="blue-link" href="https://github.com/vassilyp">GitHub: <i class="fa-brands fa-github"></i></a></p>
-        <p><a class="blue-link" href="https://linkedin.com/in/vassily-petrousevitch">LinkedIn: <i class="fa-brands fa-linkedin"></i></a></p>
-        <p><a class="blue-link" href="mailto:vasspetrousevitch@gmail.com">Email: <i class="fa-regular fa-envelope"></i></a></p>
+        <p>
+          <a class="blue-link" href="https://github.com/vassilyp"
+            >GitHub: <i class="fa-brands fa-github"></i
+          ></a>
+        </p>
+        <p>
+          <a
+            class="blue-link"
+            href="https://linkedin.com/in/vassily-petrousevitch"
+            >LinkedIn: <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p>
+          <a class="blue-link" href="mailto:vasspetrousevitch@gmail.com"
+            >Email: <i class="fa-regular fa-envelope"></i
+          ></a>
+        </p>
       </div>
     </header>
 
@@ -39,7 +44,9 @@
           hx-trigger="click, load"
           hx-swap="innerHTML"
           class="blue-link"
-        >About</button>
+        >
+          About
+        </button>
         <button
           hx-get="/projects/"
           hx-target="#content-container"
@@ -49,12 +56,26 @@
         >
           Projects/Tech
         </button>
-        <button
-
-        >
-          Blog
-        </button>
+        <button>Blog</button>
       </nav>
     </div>
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/dcdc85afdd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- More icons (for tech section)-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Import htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+
+    <script src="./js/webgl-effects.js" type="module"></script>
   </body>
 </html>
