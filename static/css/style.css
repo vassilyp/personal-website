@@ -105,7 +105,7 @@ header h3 {
 
 .blue-link {
   outline-color: transparent;
-  color: var(--accent-color);
+  color: var(--main-text-color);
   text-decoration: none;
 
   display: inline-block;
@@ -173,9 +173,8 @@ header h3 {
 
 button {
   margin: 1.5rem 0 1rem 0;
-  background: var(--background-color);
+  background: transparent;
   border: none;
-  color: var(--accent-color);
   font-family: karla;
   font-size: 1rem;
 
