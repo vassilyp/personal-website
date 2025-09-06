@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 :root {
@@ -14,8 +14,8 @@ html {
 }
 
 @font-face {
-  font-family: 'karla';
-  src: url('/../fonts/karla/Karla-VariableFont_wght.ttf') format('truetype');
+  font-family: "karla";
+  src: url("/../fonts/karla/Karla-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -32,6 +32,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 h1 {
@@ -96,7 +105,7 @@ header h3 {
 
 .blue-link {
   outline-color: transparent;
-  color: var(--accent-color);
+  color: var(--main-text-color);
   text-decoration: none;
 
   display: inline-block;
@@ -104,7 +113,7 @@ header h3 {
 }
 
 .blue-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -122,6 +131,15 @@ header h3 {
 }
 
 /* End navigation links */
+
+/* Pre content/nav section */
+
+#content-container nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* End pre content/nav section */
 
 /* About me */
 
@@ -155,9 +173,8 @@ header h3 {
 
 button {
   margin: 1.5rem 0 1rem 0;
-  background: var(--background-color);
+  background: transparent;
   border: none;
-  color: var(--accent-color);
   font-family: karla;
   font-size: 1rem;
 
@@ -166,7 +183,7 @@ button {
 }
 
 button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -196,7 +213,7 @@ button:hover::after {
   list-style-position: inside;
 }
 
-#about li~li {
+#about li ~ li {
   margin-top: 0.3rem;
 }
 
@@ -222,7 +239,7 @@ button:hover::after {
 }
 
 .project::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -301,7 +318,6 @@ button:hover::after {
     height: 18rem;
   }
 }
-
 
 @media screen and (min-width: 940px) {
   h1 {

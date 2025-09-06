@@ -1,157 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vassily Petrousevitch</title>
     <link rel="canonical" href="https://vassilyp.com/" />
 
-    <link href="css/style.css?ver=2.0" rel="stylesheet">
-
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/dcdc85afdd.js" crossorigin="anonymous"></script>
-
-    <!-- More icons (for tech section)-->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!-- Import htmx -->
-    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+    <link href="css/style.css?ver=2.0" rel="stylesheet" />
   </head>
   <body>
-
+    <canvas id="c"></canvas>
     <header>
       <h1>Vassily Petrousevitch</h1>
       <h3>Full-stack web developer.</h3>
       <div id="contacts">
-        <p><a class="blue-link" href="https://github.com/vassilyp">GitHub: <i class="fa-brands fa-github"></i></a></p>
-        <p><a class="blue-link" href="https://linkedin.com/in/vassily-petrousevitch">LinkedIn: <i class="fa-brands fa-linkedin"></i></a></p>
-        <p><a class="blue-link" href="mailto:vasspetrousevitch@gmail.com">Email: <i class="fa-regular fa-envelope"></i></a></p>
+        <p>
+          <a class="blue-link" href="https://github.com/vassilyp"
+            >GitHub: <i class="fa-brands fa-github"></i
+          ></a>
+        </p>
+        <p>
+          <a
+            class="blue-link"
+            href="https://linkedin.com/in/vassily-petrousevitch"
+            >LinkedIn: <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p>
+          <a class="blue-link" href="mailto:vasspetrousevitch@gmail.com"
+            >Email: <i class="fa-regular fa-envelope"></i
+          ></a>
+        </p>
       </div>
     </header>
 
-    <div class="container">
-      <div id="about" class='section'>
-        <div class='about-col-1'>
-          <img src="images/headshot.jpg" alt="headshot" height="450px" width="auto">
-        </div>
-        <div class='about-col-2'>
-          <h2>About me</h2>
-          <p>I am a Computer Engineering graduate of UBC with expertise in web development.</p>
-          <br>
-          <p>I am currently seeking employment! If you know/are someone who needs a (very smart and capable) developer, email me!</p>
-          <br>
-          <p>In my free time, I also enjoy hiking, reading, gaming, and martial-arts-ing.</p>
-
-          <div id="about-two-columns">
-            <div class="about-buttons">
-              <button
-                hx-get="/experience/"
-                hx-target="#about-two-columns"
-                hx-trigger="click"
-                hx-swap="outerHTML"
-                class="blue-link clicked"
-              >Experience</button>
-              <button
-                hx-get="/education/"
-                hx-target="#about-two-columns"
-                hx-trigger="click"
-                hx-swap="outerHTML"
-                class="blue-link"
-              >Education</button>
-            </div>
-	  <div id="about-qualifications">
-	    <h4>Cloud Developer @ LifeBooster</h4>
-	    <ul>
-		<li>Implemented core functionality of a new web app that manages ergonomic assessments at the organizational level.</li>
-		<li>Worked with both the front-end and back-end to deliver full features in an agile, fast-paced environment.</li>
-	    </ul>
-	    <br>
-	    <h4>Co-op Web Developer @ UBC IT Web Services</h4>
-	    <ul>
-	      <li>Maintained ~150 UBC websites, keeping track of dependency and security updates</li>
-	      <li>Resolved 40 tickets from UBC IT clients, including bug fixes and feature requests</li>
-	      <li>Migrated dozens of sites to the latest Drupal version as part of an organization-wide upgrade project</li>
-	    </ul>
-	  </div>
-          </div>
-        </div>
-      </div>
-
-      <div class='section'>
-        <h2>Projects</h2>
-        <p>Here are some projects I've previously worked on:</p><br>
-        <div id="projects">
-          <a class="project" href="https://github.com/vassilyp/GalacticHeist">
-            <div class="details">
-              <h3>GalacticHeist</h3>
-              <i class="fa fa-github"></i>
-            </div>
-            <img src="images/GalacticHeist-sample.png" alt="Galactic heist" >
-          </a>
-          <a class="project" href="https://github.com/vassilyp/vassilyp.github.io">
-            <div class="details">
-              <h3>Personal website (v1)</h3>
-              <i class="fa fa-github"></i>
-            </div>
-            <img src="images/PersonalSite-sample.png" alt="Personal site" >
-          </a>
-          <a class="project" href="https://github.com/vassilyp/nvim">
-            <div class="details">
-              <h3>Neovim configuration</h3>
-              <i class="fa fa-github"></i>
-            </div>
-            <img src="images/NeovimConfig-sample.png" alt="Neovim config" >
-          </a>
-          <a class="project" href="https://github.com/vassilyp/friendGen">
-            <div class="details">
-              <h3>FriendGen</h3>
-              <i class="fa fa-github"></i>
-            </div>
-            <img src="images/FriendGen-sample.png" alt="Friend generator" >
-          </a>
-          <a class="project" href="https://github.com/vassilyp/WashroomWayfinder">
-            <div class="details">
-              <h3>Washroom Wayfinder</h3>
-              <i class="fa fa-github"></i>
-            </div>
-            <img src="images/WashroomWayfinder-sample.png" alt="Washroom wayfinder" >
-          </a>
-          <a class="project" href="https://vassilyp.github.io/WhichElevatorIsWorking/">
-            <div class="details">
-              <h3>Which Elevator Is Working?</h3>
-              <i class="fa fa-globe"></i>
-            </div>
-            <img src="images/WhichElevatorIsWorking-sample.png" alt="Which elevator is working?" >
-          </a>
-        </div>
-
-        <br>
-        <p>You can see more on my <a class="blue-link" href="https://github.com/vassilyp">GitHub</a>.</p>
-      </div>
-
-      <div id="tech" class='section'>
-        <h2>Tech</h2>
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original-wordmark.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-        <img width="100px" height="auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" />
-      </div>
+    <div id="content-container" class="container">
+      <!-- NOTE: this nav needs to be changed in the homepage templates -->
+      <!-- i.e. 'about.html' and 'projects.html' -->
+      <nav>
+        <button
+          hx-get="/about/"
+          hx-target="#content-container"
+          hx-trigger="click, load"
+          hx-swap="innerHTML"
+          class="blue-link"
+        >
+          About
+        </button>
+        <button
+          hx-get="/projects/"
+          hx-target="#content-container"
+          hx-trigger="click"
+          hx-swap="innerHTML"
+          class="blue-link"
+        >
+          Projects/Tech
+        </button>
+        <!-- <button>Blog</button> -->
+      </nav>
     </div>
 
-    <!-- Javascript effects -->
-    <script src="js/effects.js"></script>
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/dcdc85afdd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- More icons (for tech section)-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Import htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+
+    <script src="./js/webgl-effects.js" type="module"></script>
   </body>
 </html>
