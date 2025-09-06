@@ -38,8 +38,9 @@ canvas {
   display: block;
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100vh;
+  /* this is the best way I've found to avoid resizing issues! just make dimensions bigger from the start */
+  width: 200vw;
+  height: 200vh;
   z-index: -1;
 }
 
