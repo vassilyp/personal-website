@@ -34,13 +34,13 @@ body {
   align-items: center;
 }
 
-canvas {
+#canvas_wrapper {
   display: block;
   position: fixed;
   top: 0;
-  /* this is the best way I've found to avoid resizing issues! just make dimensions bigger from the start */
-  width: 200vw;
-  height: 200vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 

@@ -6,7 +6,7 @@ function main(vs, fs) {
   twgl.setDefaults({ attribPrefix: "a_" });
 
   // -------- DO INIT TIME THINGS HERE --------------
-  twgl.resizeCanvasToDisplaySize(gl.canvas);
+  resizeCanvas();
 
   const arrays = {
     // Passing in the entire canvas as position into the vertex shader! Sue me!
@@ -35,8 +35,8 @@ function main(vs, fs) {
 
   // Render time.
   function render(time) {
-    // Resize based on display size. Keeps webgl in sync with css.
-    twgl.resizeCanvasToDisplaySize(gl.canvas);
+    resizeCanvas();
+
     // Sync clip space to canvas dimensions
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
@@ -70,6 +70,16 @@ const readShaderFiles = async () => {
     .catch((error) => console.error(error));
 
   return [vertexShaderSource, fragmentShaderSource];
+};
+
+// Resize based on display size. Keeps webgl in sync with css.
+const resizeCanvas = () => {
+  const wrapper = document.getElementById("canvas_wrapper");
+  const rect = wrapper.getBoundingClientRect();
+
+  const gl = document.getElementById("c").getContext("webgl2");
+  gl.canvas.width = rect.width;
+  gl.canvas.height = rect.height;
 };
 
 // Read in the shader files, and use them to run the webgl code
