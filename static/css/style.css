@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 #canvas_wrapper {
@@ -39,9 +40,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100dvw;
-  height: 100dvh;
+  width: 110dvw;
+  height: 120dvh;
   z-index: -1;
+  overflow: hidden;
 }
 
 h1 {
